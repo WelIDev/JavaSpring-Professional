@@ -21,7 +21,8 @@ public class Payment {
 
     public Payment() {}
 
-    public Payment(Instant moment, Order order) {
+    public Payment(Long id, Instant moment, Order order) {
+        this.id = id;
         this.moment = moment;
         this.order = order;
     }
