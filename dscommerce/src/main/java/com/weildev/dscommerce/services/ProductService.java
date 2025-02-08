@@ -38,4 +38,13 @@ public class ProductService {
         entity = productRepository.save(entity);
         return new ProductDTO(entity);
     }
+
+    @Transactional
+    public ProductDTO update(Long id, ProductDTO productDTO) {
+        Product entity = productRepository.getReferenceById(id);
+        BeanUtils.copyProperties(productDTO, entity, "id");
+
+        entity = productRepository.save(entity);
+        return new ProductDTO(entity);
+    }
 }
