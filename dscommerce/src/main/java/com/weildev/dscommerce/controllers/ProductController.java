@@ -1,0 +1,19 @@
+package com.weildev.dscommerce.controllers;
+
+import com.weildev.dscommerce.dto.ProductDTO;
+import com.weildev.dscommerce.services.ProductService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping(value = "/products")
+public class ProductController {
+
+    @Autowired
+    private ProductService productService;
+
+    @GetMapping(value = "/{id}")
+    public ProductDTO findById(@PathVariable Long id) {
+        return productService.findById(id);
+    }
+}
