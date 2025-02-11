@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="modeloDominioORM" />
+        <module name="clientesCRUD" />
         <module name="dscommerce" />
       </profile>
     </annotationProcessing>
@@ -16,6 +17,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="clientesCRUD" options="-parameters" />
       <module name="componenteInjecaoDependencia" options="-parameters" />
       <module name="dscommerce" options="-parameters" />
       <module name="modeloDominioORM" options="-parameters" />
